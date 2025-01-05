@@ -1,0 +1,19 @@
+name: Create .env File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-envfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo "REACT_APP_ACS_ENDPOINT=${{ secrets.REACT_APP_ACS_ENDPOINT }}" >> .env
+          echo "REACT_APP_ACS_ACCESS_KEY=${{ secrets.REACT_APP_ACS_ACCESS_KEY }}" >> .env
