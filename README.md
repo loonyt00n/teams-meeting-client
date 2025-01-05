@@ -1,8 +1,8 @@
 # Getting Started
 
 ## Commands
-npm install
-npm start
+- npm install
+- npm start
 
 ## Environment
 - Create a .env file similar to .env-sample to run in local
