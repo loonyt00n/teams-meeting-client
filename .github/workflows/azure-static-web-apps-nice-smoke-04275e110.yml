@@ -19,6 +19,13 @@ jobs:
         with:
           submodules: true
           lfs: false
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo "REACT_APP_ACS_ENDPOINT=${{ secrets.REACT_APP_ACS_ENDPOINT }}" >> .env
+          echo "REACT_APP_ACS_ACCESS_KEY=${{ secrets.REACT_APP_ACS_ACCESS_KEY }}" >> .env
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
