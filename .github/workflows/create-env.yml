@@ -12,8 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Create .env file
+      - name: Create app/.env file
         run: |
-          touch .env
-          echo "REACT_APP_ACS_ENDPOINT=${{ secrets.REACT_APP_ACS_ENDPOINT }}" >> .env
-          echo "REACT_APP_ACS_ACCESS_KEY=${{ secrets.REACT_APP_ACS_ACCESS_KEY }}" >> .env
+          touch app/.env
+          echo "REACT_APP_ACS_ENDPOINT=${{ secrets.REACT_APP_ACS_ENDPOINT }}" >> app/.env
+          echo "REACT_APP_ACS_ACCESS_KEY=${{ secrets.REACT_APP_ACS_ACCESS_KEY }}" >> app/.env
