@@ -20,7 +20,7 @@ export const useACSClient = () => {
         //explicitly pass the endpoint back as it is needed by the adapter
         tokenResponse.endpoint = endpoint;
 
-        //console.log('Token Response:', tokenResponse);
+        console.log('Token Response:', tokenResponse);
 
         setToken(tokenResponse);
       } catch (err) {
